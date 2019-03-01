@@ -1,2 +1,2 @@
-# SPORT_156-weighing-scale
+# SPORT 156 Weighing Scale
 WaggleNet Weighing Scale Implementation
