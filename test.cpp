@@ -13,8 +13,9 @@ void setup() {
 void loop() {
     Serial.print("Reading: ");
     float w8 = scale.get_units();
-    if (abs(w8) < 0.5) { //resets w8 to 0 if sensor automatically increments w8, wrong readings
-        Serial.print(0.0, 1);
+    if (abs(w8) < 0.5 || w8 == -0.0) {
+        w8 = 0.0; //resets w8 to 0 if sensor automatically increments w8, wrong readings
+        Serial.print(w8, 1);
     }
     else {
         Serial.print(w8, 1); //scale.get_units() returns a float
